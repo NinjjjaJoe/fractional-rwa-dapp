@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stripe-purple: #635BFF;
+  --stripe-purple-dark: #0A2540;
+  --stripe-blue: #00D4FF;
+  --stripe-gray: #425466;
+  --stripe-light-gray: #F6F9FC;
+}
+
+body {
+  background-color: white;
+  color: var(--stripe-purple-dark);
+}
+
+/* Stripe-inspired gradients */
+.gradient-hero {
+  background: linear-gradient(135deg, var(--stripe-purple) 0%, var(--stripe-blue) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(to bottom right, #ffffff, var(--stripe-light-gray));
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-[#635BFF] hover:bg-[#5348E8] text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-[#635BFF] font-medium px-6 py-3 rounded-lg transition-all duration-200 border-2 border-[#635BFF];
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#635BFF] focus:border-transparent transition-all;
+}
+
+/* Navigation active state */
+.nav-link {
+  @apply text-gray-700 hover:text-[#635BFF] transition-colors duration-200;
+}
+
+.nav-link-active {
+  @apply text-[#635BFF] font-medium;
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
